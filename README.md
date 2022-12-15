@@ -15,6 +15,6 @@ rtmp=`cat /ffmpeg/config.ini`
 
 while true; do video=$(find ./ -type f | shuf -n 1); ffmpeg -re -i "$video" -preset ultrafast -vcodec libx264 -g 60 -b:v 1500k -c:a aac -b:a 92k -strict -2 -f flv ${rtmp}; done
 
-#启动docker
+## 启动docker
 docker run -itd --name ffmpeg -v /root/ffmpeg:/ffmpeg -w /ffmpeg --restart=always --privileged=true gamefi001/ffmpeg:latest /ffmpeg/start.sh
 
