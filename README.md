@@ -1,4 +1,4 @@
-#通过docker运行一个ffmpeg,实现自动化直播推流
+# 通过docker运行一个ffmpeg,实现自动化直播推流
 
 ## 创建工作目录,并放入mp4格式文件
 mkdir /root\/ffmpeg
